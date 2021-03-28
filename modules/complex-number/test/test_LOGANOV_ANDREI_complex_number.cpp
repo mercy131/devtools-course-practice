@@ -1,9 +1,7 @@
 // Copyright 2021 Loganov Andrei
-
 #include <gtest/gtest.h>
 #include <tuple>
 #include "include/complex_number.h"
-
 TEST(Loganov_Andrei_ComplexNumberTest, arithmetic_op) {
     // initialization
     ComplexNumber n1(182.0, 17.0);
@@ -22,7 +20,7 @@ TEST(Loganov_Andrei_ComplexNumberTest, CopyValue) {
     ComplexNumber b(a);
     // calc
     bool res = false;
-    if ((b.getRe() == 10)&&(b.getIm() == 12)) {
+    if ((b.getRe() == 10) && (b.getIm() == 12)) {
         res = true;
     }
     // Assert
