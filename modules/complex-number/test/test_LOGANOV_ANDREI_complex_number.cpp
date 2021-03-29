@@ -1,7 +1,9 @@
 // Copyright 2021 Loganov Andrei
+
 #include <gtest/gtest.h>
 #include <tuple>
 #include "include/complex_number.h"
+
 TEST(Loganov_Andrei_ComplexNumberTest, arithmetic_op) {
     // initialization
     ComplexNumber n1(182.0, 17.0);
@@ -12,8 +14,9 @@ TEST(Loganov_Andrei_ComplexNumberTest, arithmetic_op) {
     ComplexNumber op = (n1+n2)*n3/n4;
     ComplexNumber Result(370, 54);
     // Assert
-    EXPECT_EQ(op, Result);
+    ASSERT_EQ(op, Result);
 }
+
 TEST(Loganov_Andrei_ComplexNumberTest, CopyValue) {
     // initialization
     ComplexNumber a(10.0, 12.0);
@@ -26,8 +29,10 @@ TEST(Loganov_Andrei_ComplexNumberTest, CopyValue) {
     // Assert
     ASSERT_TRUE(res);
 }
-using Loganov_Parametrized
-= testing::TestWithParam<std::tuple< double, double>>;
+
+typedef testing::TestWithParam<std::tuple<double, double>>
+    Loganov_Parametrized;
+
 TEST_P(Loganov_Parametrized, MultByConstPARAM) {
     // initialization
     const double co = 2;
@@ -38,6 +43,7 @@ TEST_P(Loganov_Parametrized, MultByConstPARAM) {
     // Assert
     ASSERT_EQ(result, numb1);
 }
+
 INSTANTIATE_TEST_CASE_P(/**/, Loganov_Parametrized, testing::Combine(
   testing::Values(2.0, 1.0),
   testing::Values(1.0, 8.0)
