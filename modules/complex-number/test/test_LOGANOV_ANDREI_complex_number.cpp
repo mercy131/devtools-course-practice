@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <tuple>
+#include <map>
 #include "include/complex_number.h"
 
 TEST(Loganov_Andrei_ComplexNumberTest, arithmetic_op) {
@@ -17,17 +18,14 @@ TEST(Loganov_Andrei_ComplexNumberTest, arithmetic_op) {
     ASSERT_EQ(op, Result);
 }
 
-TEST(Loganov_Andrei_ComplexNumberTest, CopyValue) {
+TEST(Loganov_Andrei_ComplexNumberTest, Can_Use_MAP) {
     // initialization
-    ComplexNumber a(10.0, 12.0);
-    ComplexNumber b(a);
-    // calc
-    bool res = false;
-    if ((b.getRe() == 10) && (b.getIm() == 12)) {
-        res = true;
-    }
+    ComplexNumber n1(5.0, 4.0);
+    ComplexNumber n2(3.0, 10.0);
+    std::map<int, ComplexNumber> map1 = {{1, n1}, {2, n2}};
+    auto elem = map1[2];
     // Assert
-    ASSERT_TRUE(res);
+    ASSERT_EQ(elem, n2);
 }
 
 typedef testing::TestWithParam<std::tuple<double, double>>
