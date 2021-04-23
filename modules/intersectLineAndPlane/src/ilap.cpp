@@ -1,5 +1,6 @@
 // Copyright 2021 Loganov Andrei
 #include <cmath>
+#include <limits>
 #include "include/ilap.h"
 
 Point Point::CreateVector(Point A, Point B) {
@@ -22,7 +23,7 @@ double Point::ScalarProizv(Point A, Point B) {
 
 Point Point::Normalize(Point A) {
     Point B = A;
-    double R, norm;
+    double  norm;
     double n1 = pow(B.x, 2);
     double n2 = pow(B.y, 2);
     double n3 = pow(B.z, 2);
@@ -50,8 +51,8 @@ void Point::PlaneIntersectLine(Point A, Point B, Point C, Point X, Point Y) {
         y = X.y + T.y * d / eps;
         z = X.z + T.z * d / eps;
     } else {
-        x = 1000;
-        y = 1000;
-        z = 1000;
+        x = std::numeric_limits<double>::max();
+        y = std::numeric_limits<double>::max();
+        z = std::numeric_limits<double>::max();
     }
 }
