@@ -4,6 +4,7 @@
 #include <tuple>
 #include <utility>
 #include <vector>
+#include <limits>
 #include "include/ilap.h"
 
 TEST(Loganov_Tests, TEST1) {

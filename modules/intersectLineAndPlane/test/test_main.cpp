@@ -1,4 +1,4 @@
-
+// Copyright 2021 Loganov Andrei
 
 #include <gtest/gtest.h>
 
