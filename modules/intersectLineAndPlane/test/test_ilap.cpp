@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <cmath>
 #include <limits>
+#include <cstddef>
 #include <numeric>
 
 #include "include/ilap.h"

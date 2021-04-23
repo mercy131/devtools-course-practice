@@ -1,6 +1,7 @@
 // Copyright 2021 Loganov Andrei
 #include <cmath>
 #include <limits>
+#include <cstddef>
 #include <numeric>
 #include "include/ilap.h"
 
