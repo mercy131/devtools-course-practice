@@ -1,13 +1,7 @@
 // Copyright 2021 Loganov Andrei
-#include <math.h>
-#include <algorithm>
-#include <ctime>
-#include <numeric>
-#include <random>
-#include <utility>
-#include <vector>
+#include <cmath>
 #include <limits>
-
+#include <numeric>
 #include "include/ilap.h"
 
 Point Point::CreateVector(Point A, Point B) {

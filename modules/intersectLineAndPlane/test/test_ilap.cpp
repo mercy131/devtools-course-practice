@@ -1,10 +1,9 @@
 // Copyright 2021 Loganov Andrei
-#include <math.h>
 #include <gtest/gtest.h>
-#include <tuple>
-#include <utility>
-#include <vector>
+#include <cmath>
 #include <limits>
+#include <numeric>
+
 #include "include/ilap.h"
 
 TEST(Loganov_Tests, TEST1) {

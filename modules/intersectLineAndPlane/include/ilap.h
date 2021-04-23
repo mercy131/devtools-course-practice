@@ -1,10 +1,4 @@
 // Copyright 2021 Loganov Andrei
-#include <math.h>
-#include <utility>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <limits>
 
 #ifndef MODULES_INTERSECTLINEANDPLANE_INCLUDE_ILAP_H_
 #define MODULES_INTERSECTLINEANDPLANE_INCLUDE_ILAP_H_
