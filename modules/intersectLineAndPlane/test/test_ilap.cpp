@@ -1,9 +1,6 @@
 // Copyright 2021 Loganov Andrei
 #include <gtest/gtest.h>
 #include <cmath>
-#include <limits>
-#include <cstddef>
-#include <numeric>
 
 #include "include/ilap.h"
 
@@ -86,6 +83,6 @@ TEST(Loganov_Tests, TEST6) {
     H.y = 1.27;
     H.z = 3;
     I.PlaneIntersectLine(D, E, F, G, H);
-    ASSERT_EQ(I.x, std::numeric_limits<double>::max());
+    ASSERT_EQ(I.x, 1000);
 }
 

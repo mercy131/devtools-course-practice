@@ -1,8 +1,5 @@
 // Copyright 2021 Loganov Andrei
 #include <cmath>
-#include <limits>
-#include <cstddef>
-#include <numeric>
 #include "include/ilap.h"
 
 Point Point::CreateVector(Point A, Point B) {
@@ -53,8 +50,8 @@ void Point::PlaneIntersectLine(Point A, Point B, Point C, Point X, Point Y) {
         y = X.y + T.y * d / eps;
         z = X.z + T.z * d / eps;
     } else {
-        x = std::numeric_limits<double>::max();
-        y = std::numeric_limits<double>::max();
-        z = std::numeric_limits<double>::max();
+        x = 1000;
+        y = 1000;
+        z = 1000;
     }
 }
