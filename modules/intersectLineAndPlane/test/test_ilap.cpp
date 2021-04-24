@@ -19,7 +19,7 @@ TEST(Loganov_Tests, TEST2) {
 TEST(Loganov_Tests, TEST3) {
     Point p;
     p.z = -1.25;
-    ASSERT_EQ(p.z, -1.25);
+    ASSERT_EQ(-1.25, p.z);
 }
 TEST(Loganov_Tests, TEST4) {
     Point D, E, F, G, H, I;
@@ -39,9 +39,9 @@ TEST(Loganov_Tests, TEST4) {
     H.y = 0;
     H.z = 5;
     I.PlaneIntersectLine(D, E, F, G, H);
-    ASSERT_EQ(I.x, 1.25);
-    ASSERT_EQ(I.y, 1.25);
-    ASSERT_EQ(I.z, 0);
+    ASSERT_EQ(1.25, I.x);
+    ASSERT_EQ(1.25, I.y);
+    ASSERT_EQ(0, I.z);
 }
 TEST(Loganov_Tests, TEST5) {
     Point D, E, F, G, H, I;
@@ -61,9 +61,9 @@ TEST(Loganov_Tests, TEST5) {
     H.y = 0;
     H.z = 5;
     I.PlaneIntersectLine(D, E, F, G, H);
-    ASSERT_EQ(I.x, 0);
-    ASSERT_EQ(I.y, 0);
-    ASSERT_EQ(I.z, 5);
+    ASSERT_EQ(0, I.x);
+    ASSERT_EQ(0, I.y);
+    ASSERT_EQ(5, I.z);
 }
 TEST(Loganov_Tests, TEST6) {
     Point D, E, F, G, H, I;
@@ -84,5 +84,7 @@ TEST(Loganov_Tests, TEST6) {
     H.z = 3;
     I.PlaneIntersectLine(D, E, F, G, H);
     ASSERT_EQ(I.x, std::numeric_limits<double>::max());
+    ASSERT_EQ(I.y, std::numeric_limits<double>::max());
+    ASSERT_EQ(I.z, std::numeric_limits<double>::max());
 }
 
