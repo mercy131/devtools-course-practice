@@ -1,14 +1,13 @@
 // Copyright 2021 LoganovAndrei
 
-#include <cmath>
 #include <stdlib.h>
 #include <iostream>
 #include <string>
 #include <sstream>
 #include <utility>
+#include <cmath>
 #include "include/intersect_app.h"
 #include "include/intersection_line.h"
-
 
 LineApp::LineApp() : message_("") {}
 
