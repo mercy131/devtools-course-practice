@@ -1,6 +1,6 @@
 // Copyright 2021 LoganovAndrei
 
-#include <cmath.h>
+#include <cmath>
 #include <stdlib.h>
 #include <iostream>
 #include <string>
