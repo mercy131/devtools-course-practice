@@ -26,6 +26,13 @@ set_tests_properties (${prefix}_find_Intersect2 PROPERTIES
     PASS_REGULAR_EXPRESSION "No Intersect!"
     LABELS "${MODULE}")
 add_test(
+    NAME ${prefix}_find_Intersect3
+    COMMAND ${APPLICATION} 0 5 10 0 0 5 10 0
+)
+set_tests_properties (${prefix}_find_Intersect3 PROPERTIES
+    PASS_REGULAR_EXPRESSION "Intersect!"
+    LABELS "${MODULE}")
+add_test(
     NAME ${prefix}_Check_Number_Of_Arguments
     COMMAND ${APPLICATION} 1 5 6
 )

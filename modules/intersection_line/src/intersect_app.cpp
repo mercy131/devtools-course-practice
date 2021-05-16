@@ -5,7 +5,6 @@
 #include <string>
 #include <sstream>
 #include <utility>
-#include <cmath>
 #include "include/intersect_app.h"
 #include "include/intersection_line.h"
 
